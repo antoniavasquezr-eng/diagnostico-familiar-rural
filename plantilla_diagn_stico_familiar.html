@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla de Diagnóstico - Participación Familiar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FACC15',
+                            yellowDark: '#EAB308',
+                            black: '#111827',
+                            grayDark: '#374151',
+                            grayLight: '#F3F4F6',
+                            grayBorder: '#D1D5DB'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            body { background-color: #ffffff !important; font-size: 12pt; }
+            .card-box { border: 1px solid #111827 !important; break-inside: avoid; }
+            textarea, input[type="text"] { border: none !important; border-bottom: 1px solid #9CA3AF !important; }
+        }
+    </style>
+</head>
+<body class="bg-brand-grayLight text-brand-black min-h-screen p-4 md:p-8 font-sans">
+
+    <div class="max-w-4xl mx-auto bg-white border-t-8 border-brand-yellow shadow-xl rounded-lg overflow-hidden">
+        
+        <!-- ENCABEZADO -->
+        <header class="bg-brand-black text-white p-6 relative">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <span class="bg-brand-yellow text-brand-black font-bold text-xs uppercase px-3 py-1 rounded-full">
+                        Herramienta de Diagnóstico
+                    </span>
+                    <h1 class="text-2xl md:text-3xl font-extrabold mt-2 tracking-tight">
+                        Diagnóstico y Acción: Participación Familiar
+                    </h1>
+                    <p class="text-gray-300 text-sm mt-1">
+                        Plantilla personal para evaluación y estrategia de vinculación escuela-comunidad.
+                    </p>
+                </div>
+                <button onclick="window.print()" class="no-print bg-brand-yellow hover:bg-brand-yellowDark text-brand-black font-bold px-4 py-2 rounded-md transition duration-200 flex items-center gap-2 shadow text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                    </svg>
+                    Imprimir / Guardar PDF
+                </button>
+            </div>
+
+            <!-- Datos de identificación -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 pt-4 border-t border-gray-700 text-xs text-gray-300">
+                <div>
+                    <label class="block font-semibold text-brand-yellow mb-1">Elaborado por:</label>
+                    <input type="text" placeholder="Tu nombre / cargo" class="w-full bg-brand-grayDark border border-gray-600 rounded px-2 py-1 text-white placeholder-gray-400 focus:outline-none focus:border-brand-yellow">
+                </div>
+                <div>
+                    <label class="block font-semibold text-brand-yellow mb-1">Comunidad / Curso / Grupo:</label>
+                    <input type="text" placeholder="Ej: 5° Básico A / Escuela N° 12" class="w-full bg-brand-grayDark border border-gray-600 rounded px-2 py-1 text-white placeholder-gray-400 focus:outline-none focus:border-brand-yellow">
+                </div>
+                <div>
+                    <label class="block font-semibold text-brand-yellow mb-1">Fecha de Diagnóstico:</label>
+                    <input type="date" class="w-full bg-brand-grayDark border border-gray-600 rounded px-2 py-1 text-white focus:outline-none focus:border-brand-yellow">
+                </div>
+            </div>
+        </header>
+
+        <main class="p-6 md:p-8 space-y-8">
+
+            <!-- SECCIÓN 1: CARACTERÍSTICAS DE LAS FAMILIAS -->
+            <section class="card-box bg-white border border-brand-grayBorder rounded-lg p-5 shadow-sm">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="w-8 h-8 rounded-full bg-brand-black text-brand-yellow font-bold flex items-center justify-center text-sm">1</span>
+                    <h2 class="text-lg font-bold text-brand-black uppercase tracking-wide">
+                        Características de las Familias
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Estructura -->
+                    <div class="space-y-2">
+                        <label class="block text-xs font-bold text-brand-grayDark uppercase tracking-wider">
+                            Estructura Predominante
+                        </label>
+                        <textarea rows="3" placeholder="Ej: Mayoritariamente monoparentales (jefatura femenina) y familias extensas (apoyo de abuelos)." class="w-full p-2.5 text-sm border border-brand-grayBorder rounded-md focus:ring-2 focus:ring-brand-yellow focus:outline-none bg-gray-50"></textarea>
+                    </div>
+
+                    <!-- Ocupaciones -->
+                    <div class="space-y-2">
+                        <label class="block text-xs font-bold text-brand-grayDark uppercase tracking-wider">
+                            Ocupaciones / Horarios
+                        </label>
+                        <textarea rows="3" placeholder="Ej: Trabajos informales, jornadas completas, turnos rotativos en comercio o servicios." class="w-full p-2.5 text-sm border border-brand-grayBorder rounded-md focus:ring-2 focus:ring-brand-yellow focus:outline-none bg-gray-50"></textarea>
+                    </div>
+
+                    <!-- Nivel Educativo -->
+                    <div class="space-y-2">
+                        <label class="block text-xs font-bold text-brand-grayDark uppercase tracking-wider">
+                            Nivel Educativo Promedio
+                        </label>
+                        <textarea rows="3" placeholder="Ej: Educación secundaria completa en su mayoría, bajo porcentaje con estudios técnicos." class="w-full p-2.5 text-sm border border-brand-grayBorder rounded-md focus:ring-2 focus:ring-brand-yellow focus:outline-none bg-gray-50"></textarea>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- SECCIÓN 2: TIPOS DE PARTICIPACIÓN ACTUALES -->
+            <section class="card-box bg-white border border-brand-grayBorder rounded-lg p-5 shadow-sm">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="w-8 h-8 rounded-full bg-brand-black text-brand-yellow font-bold flex items-center justify-center text-sm">2</span>
+                    <div>
+                        <h2 class="text-lg font-bold text-brand-black uppercase tracking-wide">
+                            Tipos de Participación Actuales
+                        </h2>
+                        <p class="text-xs text-gray-500">Marca las modalidades habituales e identifica la(s) que predomina(n) hoy.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
+                    <label class="flex items-start p-3 rounded-lg border border-gray-200 hover:bg-yellow-50/50 cursor-pointer transition">
+                        <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300 text-brand-yellow focus:ring-brand-yellow">
+                        <div class="ml-3">
+                            <span class="text-sm font-semibold text-brand-black">Asistencia Informativa</span>
+                            <p class="text-xs text-gray-500">Acuden a reuniones, citaciones o entrega de informes.</p>
+                        </div>
+                    </label>
+
+                    <label class="flex items-start p-3 rounded-lg border border-gray-200 hover:bg-yellow-50/50 cursor-pointer transition">
+                        <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300 text-brand-yellow focus:ring-brand-yellow">
+                        <div class="ml-3">
+                            <span class="text-sm font-semibold text-brand-black">Apoyo en el Hogar</span>
+                            <p class="text-xs text-gray-500">Supervisan tareas, estudio o refuerzo desde la casa.</p>
+                        </div>
+                    </label>
+
+                    <label class="flex items-start p-3 rounded-lg border border-gray-200 hover:bg-yellow-50/50 cursor-pointer transition">
+                        <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300 text-brand-yellow focus:ring-brand-yellow">
+                        <div class="ml-3">
+                            <span class="text-sm font-semibold text-brand-black">Colaboración Eventual</span>
+                            <p class="text-xs text-gray-500">Participan en eventos, actividades festivas o bingos.</p>
+                        </div>
+                    </label>
+
+                    <label class="flex items-start p-3 rounded-lg border border-gray-200 hover:bg-yellow-50/50 cursor-pointer transition">
+                        <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300 text-brand-yellow focus:ring-brand-yellow">
+                        <div class="ml-3">
+                            <span class="text-sm font-semibold text-brand-black">Comunicación Digital</span>
+                            <p class="text-xs text-gray-500">Uso activo de WhatsApp, correo o plataforma escolar.</p>
+                        </div>
+                    </label>
+
+                    <label class="flex items-start p-3 rounded-lg border border-gray-200 hover:bg-yellow-50/50 cursor-pointer transition">
+                        <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300 text-brand-yellow focus:ring-brand-yellow">
+                        <div class="ml-3">
+                            <span class="text-sm font-semibold text-brand-black">Toma de Decisiones / Liderazgo</span>
+                            <p class="text-xs text-gray-500">Participan en el Centro de Padres, Consejo u comités.</p>
+                        </div>
+                    </label>
+
+                    <label class="flex items-start p-3 rounded-lg border border-gray-200 hover:bg-yellow-50/50 cursor-pointer transition">
+                        <input type="checkbox" class="mt-1 h-4 w-4 rounded border-gray-300 text-brand-yellow focus:ring-brand-yellow">
+                        <div class="ml-3">
+                            <span class="text-sm font-semibold text-brand-black">Formación / Talleres</span>
+                            <p class="text-xs text-gray-500">Asisten a charlas de formación para competencias parentales.</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="mt-4 pt-3 border-t border-gray-200">
+                    <label class="block text-xs font-bold text-brand-black mb-1">
+                        ¿Cuál de estas modalidades PREDOMINA actualmente y qué síntoma observas?
+                    </label>
+                    <input type="text" placeholder="Ej: Predomina la 'Asistencia Informativa', pero con carácter pasivo..." class="w-full p-2 text-sm border border-brand-grayBorder rounded-md focus:ring-2 focus:ring-brand-yellow focus:outline-none">
+                </div>
+            </section>
+
+
+            <!-- SECCIÓN 3: BARRERAS PRINCIPALES -->
+            <section class="card-box bg-white border border-brand-grayBorder rounded-lg p-5 shadow-sm">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="w-8 h-8 rounded-full bg-brand-black text-brand-yellow font-bold flex items-center justify-center text-sm">3</span>
+                    <div>
+                        <h2 class="text-lg font-bold text-brand-black uppercase tracking-wide">
+                            Barreras Principales
+                        </h2>
+                        <p class="text-xs text-gray-500">Registra un máximo de 3 obstáculos prioritarios identificados.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-3 mt-4">
+                    <!-- Obstáculo 1 -->
+                    <div class="flex items-center gap-3 bg-brand-grayLight p-2.5 rounded-md border-l-4 border-brand-black">
+                        <span class="font-bold text-xs bg-brand-yellow text-brand-black px-2 py-0.5 rounded">1</span>
+                        <input type="text" placeholder="Ej: Incompatibilidad de horarios laborales con las reuniones presenciales." class="w-full bg-transparent text-sm border-none focus:outline-none font-medium">
+                    </div>
+
+                    <!-- Obstáculo 2 -->
+                    <div class="flex items-center gap-3 bg-brand-grayLight p-2.5 rounded-md border-l-4 border-brand-black">
+                        <span class="font-bold text-xs bg-brand-yellow text-brand-black px-2 py-0.5 rounded">2</span>
+                        <input type="text" placeholder="Ej: Brecha en la comunicación (poca claridad o saturación de avisos)." class="w-full bg-transparent text-sm border-none focus:outline-none font-medium">
+                    </div>
+
+                    <!-- Obstáculo 3 -->
+                    <div class="flex items-center gap-3 bg-brand-grayLight p-2.5 rounded-md border-l-4 border-brand-black">
+                        <span class="font-bold text-xs bg-brand-yellow text-brand-black px-2 py-0.5 rounded">3</span>
+                        <input type="text" placeholder="Ej: Sensación de desconexión o falta de espacios para ser escuchados." class="w-full bg-transparent text-sm border-none focus:outline-none font-medium">
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- SECCIÓN 4: OPORTUNIDAD DE MEJORA -->
+            <section class="card-box bg-yellow-50 border-2 border-brand-yellow rounded-lg p-5 shadow-sm">
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="w-8 h-8 rounded-full bg-brand-yellow text-brand-black font-extrabold flex items-center justify-center text-sm">4</span>
+                    <div>
+                        <h2 class="text-lg font-extrabold text-brand-black uppercase tracking-wide">
+                            Oportunidad de Mejora (Plan de Acción Inmediato)
+                        </h2>
+                        <p class="text-xs text-brand-grayDark">Define UNA acción concreta y acotada para probar en el corto plazo.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+                    <div class="md:col-span-2">
+                        <label class="block text-xs font-bold text-brand-black uppercase mb-1">
+                            Acción Concreta a Implementar
+                        </label>
+                        <textarea rows="2" placeholder="Ej: Implementar un boletín digital breve quincenal con encuestas rápidas de opinión y flexibilizar horario de atención presencial/virtual." class="w-full p-2.5 text-sm border border-brand-grayBorder rounded-md focus:ring-2 focus:ring-brand-black focus:outline-none bg-white"></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-brand-black uppercase mb-1">
+                            Plazo de prueba / Fecha objetivo
+                        </label>
+                        <input type="text" placeholder="Ej: Próximas 3 semanas / Mes de Octubre" class="w-full p-2 text-sm border border-brand-grayBorder rounded-md focus:ring-2 focus:ring-brand-black focus:outline-none bg-white">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-brand-black uppercase mb-1">
+                            Indicador de Éxito
+                        </label>
+                        <input type="text" placeholder="Ej: Aumento del 30% en la respuesta de las familias" class="w-full p-2 text-sm border border-brand-grayBorder rounded-md focus:ring-2 focus:ring-brand-black focus:outline-none bg-white">
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- PIE DE PÁGINA -->
+        <footer class="bg-brand-black text-gray-400 text-xs p-4 text-center border-t border-gray-800">
+            <p>Plantilla de Diagnóstico Familiar — Diseñada bajo la paleta corporativa (Amarillo #FACC15, Negro, Gris y Blanco).</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
